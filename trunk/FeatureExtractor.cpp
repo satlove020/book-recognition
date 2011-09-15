@@ -48,8 +48,8 @@ void writeDes(ostream &fout, const Mat &des) {
 }
 
 /**
- * Get a copy of a Mate mat 
- * @return: copy of th
+ * Get a copy of a Mat
+ * @return: copy of the mat specified in parametter
  */
 Mat copyMat(const Mat &m) {
 	float *s = new float[m.rows*m.cols];
@@ -64,6 +64,9 @@ Mat copyMat(const Mat &m) {
 	return Mat(m.rows, m.cols, CV_32F, s);
 }
 
+/**
+ * Main function: extract keypoints and descriptors from multiple images
+ */
 int main(int argc, char *argv[]) {
 	string s;
 	SurfDescriptorExtractor sde;
@@ -78,14 +81,16 @@ int main(int argc, char *argv[]) {
 		int level = 500;
 		SurfFeatureDetector sfd(level);
 		sfd.detect(img, keys);
+		// extract only the appropriate number of keypoints
 		while(keys.size() > 160) {
 			keys.clear();
-			level += 500;
+			level += 500;	// increase threshold to reduce number of detected keypoints
 			SurfFeatureDetector sfd1(level);
 			sfd1.detect(img, keys);
 			level++;
 		}
 		
+		// compute descriptor from keypoint and image
 		sde.compute(img, keys, des);
 		cout << "Ok " << endl;
 
@@ -106,7 +111,6 @@ int main(int argc, char *argv[]) {
 		fout << s << endl;
 		writeKeys(fout, keys);
 		cout << "Keys num " << keys.size() << endl;
-		//cout << "Write keys " << endl;
 		writeDes(fout, des);
 		fout.close();
 		count++;
