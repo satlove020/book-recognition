@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, Camera!</string>
+    <string name="app_name">BookRecognize</string>
+    
+    <!-- Home Activity -->
+    <string name="take_image">Take a Picture</string>
+    <string name="load_image">Load an Image</string>
+    <string name="no_folder">There are no image to load!</string>
+    
+    <!-- Search Activity -->
+    <string name="search">Search Now</string>
+    <string name="save">Search Later</string>
+    <string name="cancel">Cancel</string>
+    <string name="save_error">Please Take a Photo Before Save</string>
+    <string name="loading">Loading Please Wait...</string>
+    
+    <!-- ItemResult Activity -->
+    <string name="rate">Rate</string>
+    <string name="similar">Similar Book</string>
+    <string name="buy">Buy Info</string>
+    <string name="save_book">Save Book</string>
+    
+    <!--  AfterLoad Activity -->
+    <string name="delete">Delete</string>
+    <string name="delete_title">Delete This File...</string>
+    <string name="delete_question">Are You Sure?</string>
+    <string name="delete_message_ok">Your file have been deleted.</string>
+    <string name="delete_title_ok_button">Ok</string>
+    <string name="delete_title_cancel_button">Cancel</string>
+    
+    <!-- ItemResult Activity -->
+    <string name="rate_ok">Thanks for Rating!</string>
+    <string name="rate_error">Error, Please try again later.</string>
+    
+    <!-- ShopResult Activity -->
+    
+</resources>

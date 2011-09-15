@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/relativeLayout1"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@drawable/list_result_item_background"
+	android:padding="5dip">
+	
+    <TextView
+    	android:id="@+id/shop_name"
+    	android:textAppearance="?android:attr/textAppearanceLarge"
+    	android:layout_height="wrap_content"
+    	android:text="TextView"
+    	android:singleLine="true"
+    	android:layout_width="wrap_content"
+    	android:layout_marginLeft="5dp">
+    </TextView>
+
+    <TextView
+    	android:id="@+id/shop_address"
+    	android:layout_below="@+id/shop_name"
+    	android:layout_height="wrap_content"
+    	android:text="TextView"
+    	android:singleLine="true"
+    	android:layout_width="wrap_content"
+    	android:layout_marginLeft="5dp">
+    </TextView>
+
+</RelativeLayout>
