@@ -1,5 +1,0 @@
-com.mysql.jdbc.Driver
-jdbc:mysql://localhost/mhstk53ca
-root
-mhstk53ca
-8080
