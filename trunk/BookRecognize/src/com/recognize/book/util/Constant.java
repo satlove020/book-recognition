@@ -10,6 +10,8 @@ public class Constant {
 	public static String MES_RATE_OK = "Thanks for rating.";
 	public static String VIEW_TITLE_RATING_DIALOG = "Rating ...";
 	public static String MES_NO_IMAGE = "Can not find image.";
+	public static String MES_NO_FOLDER = "There are no image to load!";
+	public static String MES_NO_FILE = "There are no image to load!";
 	/*
 	 * Path File
 	 */

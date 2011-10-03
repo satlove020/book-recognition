@@ -70,23 +70,18 @@ public class HomeActivity extends Activity {
 	        loadImageButton.setOnClickListener(new OnClickListener(){
 	        	
 	        	public void onClick(View v){
-	        		Intent intent = new Intent(getApplicationContext(), LoadActivity.class);
 	        		File saveFolder = new File(Constant.SAVED_FOLDER);
-	        		if(saveFolder.exists()){
-	        			try {
-							saveFolder.createNewFile();
-						} catch (IOException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-	        		}
-	        		if(saveFolder.exists() || saveFolder.listFiles().length == 0){
+	        		if(saveFolder.exists() == false){
 	        			Toast.makeText(getApplicationContext(), 
-	        					Res.getString(getApplicationContext(), 
-	        								  R.string.no_folder), 
-	        					Toast.LENGTH_LONG);
+	        						   Constant.MES_NO_FOLDER, Toast.LENGTH_LONG).show();
+	        			
+	        		} else if(saveFolder.listFiles().length == 0){
+	        			Toast.makeText(getApplicationContext(), 
+	        						   Constant.MES_NO_FILE, Toast.LENGTH_LONG).show();
+	        		}else {
+	        			Intent intent = new Intent(getApplicationContext(), LoadActivity.class);
+	        			startActivity(intent);
 	        		}
-	        		startActivity(intent);
 	        	}
 	        });
 	        

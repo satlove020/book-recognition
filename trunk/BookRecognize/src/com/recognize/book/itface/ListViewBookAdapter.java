@@ -7,6 +7,7 @@ import com.recognize.book.util.BookInfo;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Canvas;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -74,7 +75,11 @@ public class ListViewBookAdapter extends BaseAdapter{
         if(convertView==null)
         {
             holder = new ViewHolder();
-            convertView = inflater.inflate(R.layout.list_item_row_book, null);
+            if(position == 0){
+            	convertView = inflater.inflate(R.layout.list_item_row_book_first_book, null);
+            }else{
+            	convertView = inflater.inflate(R.layout.list_item_row_book, null);
+            }
             /*
              * set holder
              */
@@ -95,7 +100,7 @@ public class ListViewBookAdapter extends BaseAdapter{
         holder.book_image.setImageURI(Uri.parse(bInfo.image));
         holder.book_title.setText(bInfo.title);
         holder.book_author.setText(bInfo.author);
-
+        
         return convertView;
     }
 
