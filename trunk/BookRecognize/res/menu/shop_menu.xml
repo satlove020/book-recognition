@@ -1,8 +1,0 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/new_game"
-          android:icon="@drawable/menu_icon_home"
-          android:title="Hello" />
-    <item android:id="@+id/help"
-          android:icon="@drawable/menu_icon_help"
-          android:title="Goodbye" />
-</menu>
